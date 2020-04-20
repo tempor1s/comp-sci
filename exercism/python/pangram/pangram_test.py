@@ -49,6 +49,13 @@ class PangramTest(unittest.TestCase):
     def test_sentence_without_upper_bound(self):
         self.assertIs(is_pangram("abcdefghijklmnopqrstuvwxy"), False)
 
+# edge cases
+# empty string
+# numbers?
+
+# bad input cases
+# arrays
+# hashtables
 
 if __name__ == "__main__":
     unittest.main()

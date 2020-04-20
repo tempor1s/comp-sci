@@ -56,5 +56,15 @@ class BinarySearchTest(unittest.TestCase):
     def assertRaisesWithMessage(self, exception):
         return self.assertRaisesRegex(exception, r".+")
 
+# edge cases
+
+# empty array
+# other things that are not integers
+
+# bad cases
+
+# anything that is unsorted
+# anything that is unable to be compared
+
 if __name__ == "__main__":
     unittest.main()
