@@ -47,16 +47,7 @@ where
         K: Borrow<Q>,
         Q: Hash + Eq + ?Sized,
     {
-        let bucket = self.bucket(&key);
-
-        // for &(ref ekey, ref eval) in &self.buckets[bucket] {
-        //     if ekey == key {
-        //         return Some(eval);
-        //     }
-        // }
-        // return None;
-
-        self.buckets[bucket]
+        self.buckets[self.bucket(&key)]
             .iter() // Iterator<Item = &(K, V)>
             .find(|&(ref ekey, _)| ekey.borrow() == key)
             .map(|&(_, ref v)| v)
